@@ -2,13 +2,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the "public" directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));  // Explicitly set views directory
+
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set view engine to EJS
-app.set('view engine', 'ejs');
-
-// Define the route to render the main page
+// Route to render the index page
 app.get('/', (req, res) => {
     res.render('index');
 });
