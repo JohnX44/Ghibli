@@ -2,16 +2,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Set EJS as the template engine
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set view engine to EJS
 app.set('view engine', 'ejs');
 
-// Set the views directory explicitly
-app.set('views', path.join(__dirname, 'views'));
-
-// Serve static files
-app.use(express.static('public'));
-
-// Route to the main portfolio page
+// Route to render the index page
 app.get('/', (req, res) => {
     res.render('index');
 });
