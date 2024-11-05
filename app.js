@@ -1,8 +1,12 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
+
+// Set the views directory explicitly
+app.set('views', path.join(__dirname, 'views'));
 
 // Serve static files
 app.use(express.static('public'));
