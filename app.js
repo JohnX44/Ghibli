@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Set view engine to EJS
 app.set('view engine', 'ejs');
 
-// Route to render the index page
+// Define the route to render the main page
 app.get('/', (req, res) => {
     res.render('index');
 });
