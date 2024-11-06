@@ -1023,40 +1023,44 @@ h1, h2, .navbar-brand {
   }
 
   /* Table styling */
-  .table {
+  /* Table styling */
+.table {
     width: 600px;
     height: 100px;
     background: #d2b48c;
-    border: 8px solid #8B4513;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border: 4px solid #8B4513;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin-top: -10px;
+    background: linear-gradient(135deg, #deb887 25%, #d2b48c 25%, #d2b48c 50%, #deb887 50%, #deb887 75%, #d2b48c 75%, #d2b48c);
+    background-size: 20px 20px; /* Creates a wood-grain pattern */
   }
-
+  
+  /* Darker wood edges */
   .table::before {
     content: '';
     position: absolute;
-    bottom: -20px;
+    bottom: -12px;
     left: 0;
     right: 0;
-    height: 20px;
+    height: 15px;
     background: #8B4513;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
-
+  
   .table p {
     font-size: 20px;
     font-weight: bold;
     color: #5A3D2B;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
   }
-
   /* Layout adjustments for tablet and desktop */
   .layout-row {
     display: flex;
