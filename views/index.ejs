@@ -24,34 +24,63 @@
         <div class="butterfly butterfly5"></div>
     </div>
 
-    <!-- Hero Section with Video -->
-    <header class="hero-section text-center py-5">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-3 text-start">
-                    <p class="text-muted">Created by:</p>
-                    <h5>John Mark D. Papelirin</h5>
-                </div>
-                <div class="tv-frame">
-                    <div class="tv-screen">
-                        <video autoplay muted loop class="tv-video">
-                            <source src="/stuff/main-video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="tv-controls">
-                        <div class="control-knob"></div>
-                        <div class="control-knob"></div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-end">
-                    <p class="text-muted">Portfolio |</p>
-                    <p>2024 | 3 min</p>
-                </div>
-            </div>
-            <h1 class="display-1 my-4">JOHN MARK D. PAPELIRIN</h1>
+    <div class="container">
+        <!-- Speakers side-by-side on top in mobile view -->
+        <div class="speakers-top">
+          <div class="speaker">
+            <p>Speaker</p>
+            <label class="toggle-container">
+              <input type="checkbox" class="toggle-checkbox" id="vintageToggleLeft" style="display:none;">
+              <div class="toggle-button"></div>
+            </label>
+          </div>
+    
+          <div class="speaker">
+            <p>Speaker</p>
+            <label class="toggle-container">
+              <input type="checkbox" class="toggle-checkbox" id="vintageToggleRight" style="display:none;">
+              <div class="toggle-button"></div>
+            </label>
+          </div>
         </div>
-    </header>
+    
+        <!-- TV frame in the center for desktop and tablet views -->
+        <div class="layout-row">
+          <div class="speaker">
+            <p>Speaker</p>
+            <label class="toggle-container">
+              <input type="checkbox" class="toggle-checkbox" id="vintageToggleLeftDesktop" style="display:none;">
+              <div class="toggle-button"></div>
+            </label>
+          </div>
+    
+          <div class="tv-frame">
+            <div class="tv-screen">
+              <video autoplay muted loop>
+                <source src="/stuff/main-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+    
+          <div class="speaker">
+            <p>Speaker</p>
+            <label class="toggle-container">
+              <input type="checkbox" class="toggle-checkbox" id="vintageToggleRightDesktop" style="display:none;">
+              <div class="toggle-button"></div>
+            </label>
+          </div>
+        </div>
+    
+        <!-- Table at the bottom -->
+        <div class="table">
+          <p>Table</p>
+        </div>
+      </div>
+    
+      <!-- Audio Element for Music -->
+      <audio id="music" src="/stuff/Owl City - Fireflies (Official Music Video).mp3" preload="auto"></audio>
+    
 
     <!-- Include Who is John Section -->
     <%- include('partials/who_is_john') %>

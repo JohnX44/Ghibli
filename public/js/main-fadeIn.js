@@ -31,3 +31,28 @@ document.addEventListener("DOMContentLoaded", () => {
         butterfly.style.top = `${randomY}px`;
     });
 });
+
+
+
+// MUSIC
+  // JavaScript for handling toggle and music playback
+  const music = document.getElementById("music");
+  const toggleLeft = document.getElementById("vintageToggleLeft");
+  const toggleRight = document.getElementById("vintageToggleRight");
+  const toggleLeftDesktop = document.getElementById("vintageToggleLeftDesktop");
+  const toggleRightDesktop = document.getElementById("vintageToggleRightDesktop");
+
+  // Add event listeners to both mobile and desktop toggles
+  toggleLeft.addEventListener("change", toggleMusic);
+  toggleRight.addEventListener("change", toggleMusic);
+  toggleLeftDesktop.addEventListener("change", toggleMusic);
+  toggleRightDesktop.addEventListener("change", toggleMusic);
+
+  function toggleMusic() {
+    if (toggleLeft.checked || toggleRight.checked || toggleLeftDesktop.checked || toggleRightDesktop.checked) {
+      music.play();
+    } else {
+      music.pause();
+      music.currentTime = 0; // Reset the music
+    }
+  }
