@@ -56,3 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
       music.currentTime = 0; // Reset the music
     }
   }
+  
